@@ -3,11 +3,23 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { ConfigProvider } from 'antd';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <ConfigProvider theme={{
+      components: {
+        Carousel: {
+          dotHeight: '20px'
+        },
+      },
+      token: {
+        fontFamily: "-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue','sans-serif'"
+      }
+    }}>
+      <App />    
+    </ConfigProvider>
   </React.StrictMode>
 );
 

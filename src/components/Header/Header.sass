@@ -1,0 +1,116 @@
+.header
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+  background-color: var(--counter-bg-color)
+  min-height: 87px
+  padding-top: 16px
+  padding-bottom: 16px
+
+.logo 
+  display: flex
+  flex-direction: row
+  align-items: center
+  gap: 10px
+  margin-right: 1em
+
+.logo__text 
+  color: var(--secondary-color)
+  font-size: 28px
+  font-weight: 700
+
+.navigation-container
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+
+@media screen and (max-width: 880px) 
+  .navigation
+    position: absolute
+    visibility: hidden
+
+
+.navigation__list
+  display: flex
+  flex-direction: row
+  align-content: center
+  gap: 40px
+  flex-wrap: wrap
+
+.navigation__item
+  cursor: pointer
+  color: var(--secondary-color)
+  font-size: 23px
+  font-weight: 500
+  position: relative
+  transition: all 0.4s ease-out
+  &:hover
+    color: var(--highlight-color)
+
+.buttons-group
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  gap: 24px
+  padding-left: 80px
+
+@media screen and (max-width: 1630px)
+  .buttons-group
+    padding-left: 20px
+
+@media screen and (max-width: 600px) 
+  .header
+    flex-direction: column
+    gap: 1em
+  .buttons-group
+    padding: 0
+    flex-direction: column
+  .cta-button_header
+    visibility: hidden
+
+.button-normal
+  display: flex
+  flex-direction: row
+  border-radius: 8px
+  padding: 16px 24px
+  justify-content: center
+  align-items: center
+  gap: 10px
+  font-size: 18px
+  font-style: normal
+  font-weight: 500
+  line-height: 1.27em /* 127.778% */
+  letter-spacing: -0.36px
+  transition: all 0.3s ease-out
+
+
+.login-button
+  color: var(--main-color)
+  background-color: var(--highlight-color)
+  padding: 16px 40px
+  border-radius: 8px
+  &:hover
+    background-color: var(--main-bg-color)
+
+.cta-button
+  border-radius: 8px
+  background: var(--light-bg-color)
+  color: var(--secondary-color)
+  &:hover
+    color: var(--main-color)
+    background-color: var(--main-bg-color)
+
+
+.cta-link
+  position: relative
+  &::after
+    content: url('/img/arrow-right.svg')
+    position: relative
+    left: 10px
+    width: 12px
+
+.cta-button:hover
+  .cta-link::after
+    content: url('/img/arrow-right-dark.svg')

@@ -1,0 +1,129 @@
+.modal {
+  position: absolute;
+  color: var(--secondary-color);
+  background-color: var(--counter-bg-color);
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+}
+
+.modal-wrapper {
+  /* max-width: 1200px; */
+  margin: 0 140px;
+}
+
+@media screen and (max-width: 1440px) {
+  .modal-wrapper {
+    margin: 0 100px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .modal-wrapper {
+    margin: 0 50px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .modal-wrapper {
+    margin: 0 25px;
+  }
+}
+
+.modal-header {
+  padding: 100px 0 80px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+@media screen and (max-width: 450px) {
+  .modal-header {
+    padding: 50px 0 40px 0;
+  }
+}
+
+.modal-header__title {
+  font-weight: 700;
+  font-size: 64px;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: -5px;
+  max-width: 588px;
+}
+
+@media screen and (max-width: 450px) {
+  .modal-header__title {
+    font-size: 36px;
+  }
+}
+
+.modal-header__close-button:hover {
+  opacity: 0.8;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.modal-form__data-group {
+  display: flex;
+  flex-direction: row;
+  /* flex: 1 1 auto; */
+  gap: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .modal-form__data-group {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.modal-form__input-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.modal-form__label {
+  cursor: pointer;
+  color: var(--secondary-color);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.modal-form__input {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--secondary-color);
+  background-color: var(--counter-bg-color);
+  border: none;
+  height: 20px;
+}
+
+.modal-form__submit-group {
+  text-align: right;
+}
+
+.modal-form__input_submit {
+  cursor: pointer;
+  padding: 10px 15px;
+  max-width: 387px;
+  border-radius: 4px;
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.modal-form__input_submit:hover {
+  color: var(--main-color);
+  background-color: var(--highlight-color);
+}
+
