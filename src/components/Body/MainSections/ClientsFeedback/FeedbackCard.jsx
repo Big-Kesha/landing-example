@@ -1,6 +1,6 @@
 import React from 'react';
 import reviewSymbol from '../../../../img/review-symbol.svg'
-import avatar from '../../../../img/Avatar.png' 
+import reserveAvatar from '../../../../img/Avatar.png'
 
 
 const FeedbackCard = ({personName, avatarUrl, paragraph, personData}) => {
@@ -15,7 +15,7 @@ const FeedbackCard = ({personName, avatarUrl, paragraph, personData}) => {
         </p>
       </div>
       <div className="person">
-        <img src={avatarUrl} alt="" className="person__avatar" />
+        <img src={avatarUrl} srcSet={reserveAvatar} alt="" className="person__avatar" />
         <div className="person-data">
           <h4 className="person-data__header">
             {personName}

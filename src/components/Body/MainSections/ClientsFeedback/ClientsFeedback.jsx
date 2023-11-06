@@ -13,12 +13,12 @@ import { CMS_URL } from '../Hero/Hero';
 const ClientsFeedback = () => {
   const [consumers, setConsumers] = useState([])
 
-  // const consumers = [
-  //   {id: 1, name: 'Oberon Shaw, MCH1', avatarUrl: avatar},
-  //   {id: 2, name: 'Oberon Shaw, MCH2'},
-  //   {id: 3, name: 'Oberon Shaw, MCH3'},
-  //   {id: 4, name: 'Oberon Shaw, MCH4'},
-  // ]
+  const consumersFallBack = [
+    {id: 1, name: 'Oberon Shaw, MCH1',},
+    {id: 2, name: 'Oberon Shaw, MCH2'},
+    {id: 3, name: 'Oberon Shaw, MCH3'},
+    {id: 4, name: 'Oberon Shaw, MCH4'},
+  ]
 
   const isSmallScreen = useMediaQuery({query: '(max-width: 1024px)'})
   const isTinyScreen = useMediaQuery({query: '(max-width: 768px)'})
@@ -31,10 +31,12 @@ const ClientsFeedback = () => {
   }
 
   useEffect(() => {
-    getCustomersList().then((consumersList) => {
+    getCustomersList()
+    .then((consumersList) => {
       setConsumers(consumersList)
       console.log(consumersList[0].name)
     })
+    .catch((e) => {console.log(e)})
   }, [])
 
   return (
@@ -50,15 +52,24 @@ const ClientsFeedback = () => {
               dots={true}
               slidesToShow={slidesToShow}
             >
-              {consumers.map(({attributes}) => (
+              {consumers && consumers.map((consumer) => (
                 <FeedbackCard 
-                  key={attributes.id} 
-                  personName={attributes.name}
-                  avatarUrl={CMS_URL + attributes.avatar.data.attributes.url}
-                  paragraph={attributes.paragraph}
-                  personData={attributes.personData}
+                  key={consumer.attributes.id} 
+                  personName={consumer.attributes.name}
+                  avatarUrl={CMS_URL + consumer.attributes.avatar.data.attributes.url}
+                  paragraph={consumer.attributes.paragraph}
+                  personData={consumer.attributes.personData}
                 />
-              ))}
+              ))
+              }
+              {
+                consumersFallBack.map((consumer) => (
+                  <FeedbackCard 
+                    key={consumer.id} 
+                    personName={consumer.name}
+                  />
+                ))
+              }
             </Carousel>
           </div>
     </section>

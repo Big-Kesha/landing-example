@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import productLink from '../../../Header/Header';
 import {getHeroData } from '../../../../api';
 
-// import { articleApi, getHeroData } from '../../../../api';
-// import { axiosInstance, getHeroData } from '../../../../api';
+// export const CMS_URL = 'https://big-kesha.github.io/landing-example-strapi/'
 
 export const CMS_URL = 'http://localhost:1337'
 
@@ -15,13 +14,15 @@ const Hero = ({setIsModalOpen}) => {
   })
 
   useEffect(() => {
-    getHeroData().then(({attributes}) => {
+    getHeroData()
+    .then(({attributes}) => {
       setHeroData({
         header: attributes.header,
         paragraph: attributes.paragraph,
         articleImage: attributes.articleImage.data.attributes.url,
       })
     })
+    .catch((e) => {console.log(e)})
   }, [])
 
   

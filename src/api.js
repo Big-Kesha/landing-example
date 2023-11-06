@@ -2,6 +2,8 @@ import axios from "axios"
 
 const API_URL = 'http://localhost:1337/api'
 
+// const API_URL = 'https://big-kesha.github.io/landing-example-strapi/api'
+
 export const axiosInstance = axios.create({
   baseURL: API_URL,
 })
