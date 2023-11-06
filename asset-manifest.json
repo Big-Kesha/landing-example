@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/landing-example/static/css/main.6f6d8c22.css",
-    "main.js": "/landing-example/static/js/main.9c724626.js",
+    "main.js": "/landing-example/static/js/main.2e5de5e7.js",
     "static/js/787.18125427.chunk.js": "/landing-example/static/js/787.18125427.chunk.js",
     "static/media/waves-2.png": "/landing-example/static/media/waves-2.1c547772a2306cb3a94d.png",
     "static/media/contest-image.png": "/landing-example/static/media/contest-image.fe1688509680d95e63c9.png",
@@ -10,6 +10,7 @@
     "static/media/header-underline.svg": "/landing-example/static/media/header-underline.61b139fe8614e486dea5.svg",
     "static/media/work-together-image.png": "/landing-example/static/media/work-together-image.e7696686ad814bcfce7b.png",
     "static/media/Apps.png": "/landing-example/static/media/Apps.661cae9716f9c4a32e6a.png",
+    "static/media/Avatar.png": "/landing-example/static/media/Avatar.754d501b8a0b7b74c638.png",
     "static/media/Twitter.svg": "/landing-example/static/media/Twitter.f0343b25d7d4923a7cbfb8448fe9ecce.svg",
     "static/media/logo.svg": "/landing-example/static/media/logo.011cd54f715c366f45406a0a5b36f02a.svg",
     "index.html": "/landing-example/index.html",
@@ -19,11 +20,11 @@
     "static/media/arrow-right-dark.svg": "/landing-example/static/media/arrow-right-dark.71805f2168aca1e583cd.svg",
     "static/media/arrow-right.svg": "/landing-example/static/media/arrow-right.c84da03fe57f85083f00.svg",
     "main.6f6d8c22.css.map": "/landing-example/static/css/main.6f6d8c22.css.map",
-    "main.9c724626.js.map": "/landing-example/static/js/main.9c724626.js.map",
+    "main.2e5de5e7.js.map": "/landing-example/static/js/main.2e5de5e7.js.map",
     "787.18125427.chunk.js.map": "/landing-example/static/js/787.18125427.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6f6d8c22.css",
-    "static/js/main.9c724626.js"
+    "static/js/main.2e5de5e7.js"
   ]
 }
