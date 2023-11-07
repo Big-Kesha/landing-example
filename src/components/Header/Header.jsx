@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '../../img/logo.svg'
+import burger from '../../img/burger.png'
 import './Header.sass'
 
 
@@ -7,6 +8,13 @@ export const productLink = '/'
 
 
 const Header = ({setIsModalOpen}) => {
+  let [isNav, setIsNav] = useState(false)
+
+  const showNav = () => {
+    console.log(isNav);
+    setIsNav(!isNav)
+  }
+
   return (
     <header className="header wrapper">
         <a href='/' className="logo">
@@ -14,14 +22,28 @@ const Header = ({setIsModalOpen}) => {
           <span className="logo__text">whitepace</span>
         </a>
         <div className="navigation-container">
-          <nav className="navigation">
-            <ul className='navigation__list'>
-              <li className="navigation__item"><a href="/">Товары</a></li>
-              <li className="navigation__item"><a href="/">Решения</a></li>
-              <li className="navigation__item"><a href="/">Ресурсы</a></li>
-              <li className="navigation__item"><a href="/">Цены</a></li>
-            </ul>
-          </nav>
+          {
+            !isNav &&
+            <nav className="navigation">
+              <ul className={'navigation__list hidden'}>
+                <li className="navigation__item"><a href="/">Товары</a></li>
+                <li className="navigation__item"><a href="/">Решения</a></li>
+                <li className="navigation__item"><a href="/">Ресурсы</a></li>
+                <li className="navigation__item"><a href="/">Цены</a></li>
+              </ul>
+            </nav>
+          }
+          {
+            isNav &&
+            <nav className="navigation">
+              <ul className={'navigation__list'}>
+                <li className="navigation__item"><a href="/">Товары</a></li>
+                <li className="navigation__item"><a href="/">Решения</a></li>
+                <li className="navigation__item"><a href="/">Ресурсы</a></li>
+                <li className="navigation__item"><a href="/">Цены</a></li>
+              </ul>
+            </nav>
+          }
           <div className="buttons-group">
             <button className="login-button button-normal">
               Войти
@@ -34,6 +56,9 @@ const Header = ({setIsModalOpen}) => {
                 Попробовать бесплатно
               </span>
             </button>
+          </div>
+          <div onClick={() => showNav()} className="navigation-container__burger">
+            <img src={burger} alt="" />
           </div>
         </div>
       </header>

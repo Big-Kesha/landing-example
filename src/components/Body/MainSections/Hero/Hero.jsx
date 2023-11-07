@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import productLink from '../../../Header/Header';
+import hero from '../../../../img/hero.png'
 import {getHeroData } from '../../../../api';
 
 // export const CMS_URL = 'https://big-kesha.github.io/landing-example-strapi/'
@@ -54,7 +55,7 @@ const Hero = ({setIsModalOpen}) => {
               </div>
             </div>
             <div className="article__image">
-              <img src={CMS_URL + heroData.articleImage} alt="" />
+              <img src={CMS_URL + heroData.articleImage} srcSet={hero} alt="" />
             </div>
           </div>
         </section>
